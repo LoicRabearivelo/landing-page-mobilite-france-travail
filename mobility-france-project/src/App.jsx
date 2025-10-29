@@ -7,6 +7,7 @@ import EtapeComponent from './components/EtapeComponent';
 import SloganComponent from './components/SloganComponent';
 import MapComponent from './components/MapComponent';
 import FooterComponent from './components/FooterComponent';
+import SearchComponent from './components/SearchComponent';
 
 // Import des images
 import image1 from './assets/image1.jpg';
@@ -57,7 +58,11 @@ function App() {
           <SloganComponent />
         </section>
 
-        {/* 🗺️ Map */}
+        {/* <section id="search" className="py-5 bg-light"> */}
+          {/* <h2 className="text-center mb-4 fw-bold">Trouvez la mairie la plus proche</h2> */}
+          {/* <SearchComponent /> */}
+        {/* </section> */}
+
         <section id="map" className="py-5">
           <h2 className="text-center mb-4 fw-bold">Notre présence</h2>
           <MapComponent />
