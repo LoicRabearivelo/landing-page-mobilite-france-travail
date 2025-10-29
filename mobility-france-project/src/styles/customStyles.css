@@ -75,3 +75,24 @@ body.dark-mode .etape-card {
 body.dark-mode .map-container {
   border-color: #018dcc;
 }
+
+/* Box globale qui englobe texte + image */
+.etape-box {
+  background-color: #ffffff; /* fond clair */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 0px;
+}
+
+.etape-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* Image avec shadow légère */
+.etape-image-box {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
