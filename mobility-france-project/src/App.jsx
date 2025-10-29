@@ -17,14 +17,14 @@ function App() {
       <main className="mt-5 pt-5">
         {/* Nos Solutions - Caroussel */}
         <section id="solutions" className="py-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Nos Solutions</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 mt-4">Nos Solutions</h2>
           <CarousselComponent />
         </section>
 
         {/* Étapes */}
         <section id="etapes" className="py-16">
           <h2 className="text-3xl font-bold text-center mb-8">Étapes</h2>
-          <div className="space-y-16">
+          <div className="etapes-container">
             <EtapeComponent position="right" />
             <EtapeComponent position="left" />
             <EtapeComponent position="right" />

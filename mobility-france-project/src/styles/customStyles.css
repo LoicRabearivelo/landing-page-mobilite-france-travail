@@ -1,0 +1,77 @@
+:root {
+  --bleu-clair: #018dcc;
+  --bleu-fonce: #273473;
+  --rouge: #df0c18;
+  --rose: #f09ec2;
+  --jaune: #fee108;
+}
+
+/* Utilisation dans tes composants */
+.text-primary { color: var(--bleu-clair) !important; }
+.text-secondary { color: var(--bleu-fonce) !important; }
+.text-danger { color: var(--rouge) !important; }
+.text-pink { color: var(--rose) !important; }
+.text-yellow { color: var(--jaune) !important; }
+
+/* Navbar */
+.navbar-light .nav-link:hover {
+  color: var(--bleu-clair) !important;
+  text-decoration: underline;
+}
+
+/* Map */
+.map-container {
+  border: 2px solid var(--bleu-clair);
+}
+
+/* Etape */
+.etape-card {
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+.etape-card:hover {
+  transform: translateY(-5px);
+}
+.img-wrapper img {
+  transition: transform 0.5s ease;
+}
+.img-wrapper img:hover {
+  transform: scale(1.05);
+}
+.text-section h3 {
+  color: var(--bleu-clair);
+}
+.placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--rose);
+  background: #f0f0f0;
+  height: 100%;
+}
+
+.etapes-container .etape-card {
+  margin-bottom: 4rem; /* équivalent à un espace large entre chaque étape */
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #273473;
+}
+
+body.dark-mode {
+  background-color: #273473;
+  color: #ffffff;
+}
+
+body.dark-mode .etape-card {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .map-container {
+  border-color: #018dcc;
+}
