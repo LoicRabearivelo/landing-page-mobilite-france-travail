@@ -42,22 +42,13 @@ const MapComponent = () => {
     });
 
     // Chargement des mairies annexes
-    Papa.parse('/data/mairie_annexe.csv', {
+    Papa.parse('/data/Mairie_Annexe_4244174299793264690.csv', {
       download: true,
       header: true,
       dynamicTyping: true,
       skipEmptyLines: true,
-      delimiter: ";",
       complete: (results) => {
-        const mairiesData = results.data.map(mairie => {
-          const [lat, lon] = mairie.geo_point_2d.split(',').map(coord => parseFloat(coord.trim()));
-          return {
-            ...mairie,
-            Latitude: lat,
-            Longitude: lon
-          };
-        });
-        setMairies(mairiesData);
+        setMairies(results.data);
       },
       error: (error) => console.error('Erreur CSV Mairies:', error),
     });
@@ -100,9 +91,10 @@ const MapComponent = () => {
             >
               <Popup>
                 <div className="text-center">
-                  <h6 className="fw-bold mb-2">{mairie.Nature} {mairie.Nom}</h6>
+                  <h6 className="fw-bold mb-2">{mairie.Nom}</h6>
                   <p className="mb-1">{mairie.Adresse}</p>
-                  {mairie.Elu && <p className="mb-0">Élu: {mairie.Elu}</p>}
+                  <p className="mb-1">{mairie.Code_Postal} {mairie.Ville}</p>
+                  <p className="mb-0">Tél: {mairie.Telephone}</p>
                 </div>
               </Popup>
             </Marker>
