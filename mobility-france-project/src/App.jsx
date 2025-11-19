@@ -17,17 +17,13 @@ import image3 from './assets/image3.jpg';
 function App() {
   return (
     <div className="d-flex flex-column min-vh-100">
-      {/* ✅ Navbar */}
       <NavbarComponent />
 
-      {/* ✅ Contenu principal */}
       <main className="mt-5 pt-5 flex-grow-1">
-        {/* 🎥 Nos Solutions - Vidéo en plein écran */}
         <section id="solutions" className="p-0">
           <CarouselComponent />
         </section>
 
-        {/* 🪜 Étapes */}
         <section id="etapes" className="py-5 bg-light">
           <div>
             <EtapeComponent 
